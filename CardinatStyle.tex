@@ -1,0 +1,62 @@
+\usepackage{multirow,rotating}
+\usepackage{color}
+\usepackage{hyperref}
+\usepackage{tikz-cd}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{mathtools, nccmath}%
+\usepackage{etoolbox, xparse} 
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+% Theme
+\usetheme{Boadilla}
+\usecolortheme{dolphin}
+
+% colors
+\definecolor{CardinalRed}{RGB}{140, 21, 21} % Cardinal Red
+\definecolor{AccentColor1}{RGB}{184, 58, 75} % Accent color
+
+\setbeamercolor*{palette primary}{bg=CardinalRed}
+\setbeamercolor*{palette secondary}{bg=CardinalRed, fg = white}
+\setbeamercolor*{palette tertiary}{bg=CardinalRed, fg = white}
+\setbeamercolor*{titlelike}{fg=CardinalRed}
+\setbeamercolor*{title}{bg=CardinalRed, fg = white}
+\setbeamercolor*{item}{fg=CardinalRed}
+\setbeamercolor*{caption name}{fg=CardinalRed}
+
+\usefonttheme{professionalfonts}
+
+\titlegraphic{
+\includegraphics[width=2.5cm]{SU_Seal_Red.eps}
+}
+
+\setbeamerfont{title}{size=\large}
+\setbeamerfont{subtitle}{size=\small}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{date}{size=\footnotesize}
+\setbeamerfont{institute}{size=\footnotesize}
+
+% Cardinal Box Styles
+\newtcolorbox{CardinalTheorem}[2][]{colback=white!90!CardinalRed, colframe=CardinalRed, title={#2}, #1}
+
+\newtcolorbox{CardinalLemma}[2][]{colback=white!90!CardinalRed, colframe=CardinalRed, title={#2}, #1}
+
+\newtcolorbox{CardinalProof}[2][]{colback=white!90!CardinalRed, colframe=CardinalRed, title={#2}, #1}
+
+\newlist{coloreditemize}{itemize}{1}
+\setlist[coloreditemize,1]{label=\textcolor{CardinalRed}{\scriptsize$\blacksquare$}}
+
+\AtBeginSection[]{
+  \begin{frame}
+  \vfill
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+    \usebeamerfont{title}\insertsectionhead\par%
+  \end{beamercolorbox}
+  \vfill
+  \end{frame}
+}
